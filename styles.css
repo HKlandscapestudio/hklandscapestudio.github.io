@@ -12,3 +12,79 @@
 .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:var(--cream);padding:48px;border-radius:30px}.contact-list{display:grid;gap:14px}.contact-list a,.contact-list div{padding:16px 18px;background:#fff;border-radius:16px;display:flex;flex-direction:column;gap:4px;border:1px solid rgba(13,63,43,.08)}.contact-list b{color:var(--green)}.contact-list span{color:var(--muted);word-break:break-word}
 footer{background:#082f20;color:rgba(255,255,255,.72);padding:26px 0}.footer-wrap{display:flex;justify-content:space-between;gap:20px}
 @media(max-width:800px){.menu-btn{display:block}.site-header nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;box-shadow:0 15px 30px rgba(0,0,0,.1)}body.menu-open nav{display:flex}.hero{min-height:680px}.split,.cards,.project,.contact-box{grid-template-columns:1fr}.section{padding:72px 0}.project-copy{padding:0}.footer-wrap{flex-direction:column}.brand span{font-size:14px}}
+.green365-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.green365-heading p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.green365-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.green365-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.green365-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.green365-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.green365-card-content {
+  padding: 20px;
+}
+
+.green365-card-content span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #8a6a18;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.green365-card-content h3 {
+  margin: 0;
+  color: #173b2b;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .green365-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .green365-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .green365-gallery {
+    grid-template-columns: 1fr;
+  }
+}
