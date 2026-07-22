@@ -8,13 +8,13 @@ const green365 = [
   {
     day: 8,
     title: "Xây dựng Plant Database",
-    image: "assets/green365/day-008.jpg"
+    image: "assets/day-008.png"
   },
 
   {
     day: 9,
     title: "Khởi tạo Website Hoàng Kim Landscape Studio",
-    image: "assets/green365/day-009.jpg"
+    image: "assets/day-009.png"
   }
 ];
 
