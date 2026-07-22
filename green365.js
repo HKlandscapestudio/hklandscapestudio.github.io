@@ -7,7 +7,7 @@ const green365 = [
 
   {
     day: 2,
-    title: "Tiêu đề của Ngày 2",
+    title: "Khai sinh thương hiệu "Hoàng Kim Landscape Studio",
     image: "assets/day-002.png"
   }
 ];
