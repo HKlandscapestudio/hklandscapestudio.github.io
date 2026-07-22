@@ -2,7 +2,7 @@ const green365 = [
   {
     day: 1,
     title: "Bắt đầu hành trình Green365",
-    image: "assets/green365/day-001.jpg"
+    image: "assets/day-001.png"
   },
 
   {
