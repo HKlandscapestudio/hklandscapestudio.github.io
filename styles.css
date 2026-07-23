@@ -370,3 +370,231 @@ footer{background:#082f20;color:rgba(255,255,255,.72);padding:26px 0}.footer-wra
     grid-template-columns: 1fr;
   }
 }
+/* =========================================
+   SERVICES — ONE BACKGROUND IMAGE
+========================================= */
+
+.services-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 720px;
+  padding: 110px 0;
+  background-image: url("assets/services-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.services-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(246, 241, 230, 0.94) 0%,
+      rgba(246, 241, 230, 0.83) 42%,
+      rgba(7, 54, 36, 0.38) 100%
+    );
+}
+
+.services-container {
+  position: relative;
+  z-index: 1;
+}
+
+.services-heading {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.services-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #c99316;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.services-heading h2 {
+  margin: 0 0 18px;
+  color: #073f28;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.08;
+}
+
+.services-heading p {
+  max-width: 620px;
+  margin: 0;
+  color: #354b40;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 330px;
+  padding: 34px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 20px 45px rgba(7, 50, 33, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.service-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #073f28,
+    #d09a18
+  );
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 28px 60px rgba(7, 50, 33, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.service-number {
+  display: block;
+  margin-bottom: 18px;
+  color: #c99316;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.service-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: #073f28;
+  color: #d9a62b;
+  font-size: 24px;
+}
+
+.service-card h3 {
+  margin: 0 0 16px;
+  color: #073f28;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 29px;
+  line-height: 1.25;
+}
+
+.service-card p {
+  margin: 0 0 25px;
+  color: #526158;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  color: #073f28;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-link:hover {
+  color: #c99316;
+  transform: translateX(4px);
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .services-section {
+    min-height: auto;
+    padding: 90px 0;
+    background-position: 60% center;
+  }
+
+  .services-overlay {
+    background: rgba(246, 241, 230, 0.84);
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 72px 0;
+    background-position: 65% center;
+  }
+
+  .services-overlay {
+    background: rgba(246, 241, 230, 0.88);
+  }
+
+  .services-heading {
+    margin-bottom: 32px;
+  }
+
+  .services-heading h2 {
+    font-size: 42px;
+  }
+
+  .services-heading p {
+    font-size: 15px;
+  }
+
+  .services-grid {
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 26px;
+  }
+}
