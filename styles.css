@@ -598,3 +598,19 @@ footer{background:#082f20;color:rgba(255,255,255,.72);padding:26px 0}.footer-wra
     font-size: 26px;
   }
 }
+/* ẢNH PHẦN VỀ CHÚNG TÔI */
+
+.about-image {
+  width: 100%;
+  height: 430px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
