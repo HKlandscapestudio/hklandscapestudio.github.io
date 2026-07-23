@@ -828,3 +828,7 @@ footer{background:#082f20;color:rgba(255,255,255,.72);padding:26px 0}.footer-wra
     font-size: 14px;
   }
 }
+#about.about-hero {
+  padding: 0;
+  background-color: transparent;
+}
