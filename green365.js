@@ -1,47 +1,44 @@
-const green365 = [
-  {
-  day: 3,
-  title: "Xây dựng nền tảng hồ sơ năng lực",
-  image: "assets/day-003.png"
-},
-  {
-    day: 1,
-    title: "Bắt đầu hành trình Green365",
-    image: "assets/day-001.png"
-  },
-
-  {
-    day: 2,
-    title: "Thành quả Green365 Ngày 2",
-    image: "assets/day-002.png"
-  }
-];
-
 const gallery = document.getElementById("green365-gallery");
 
-if (gallery) {
-  const sortedDays = [...green365].sort((a, b) => b.day - a.day);
+const githubApiUrl =
+  "https://api.github.com/repos/HKlandscapestudio/hklandscapestudio.github.io/contents/assets";
 
-  sortedDays.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "green365-card";
+async function loadGreen365Images() {
+  if (!gallery) return;
 
-    card.innerHTML = `
-      <img
-        src="${item.image}"
-        alt="Green365 Ngày ${item.day}"
-        loading="lazy"
-      >
+  try {
+    const response = await fetch(githubApiUrl);
 
-      <div class="green365-card-content">
-        <span>
-          Ngày ${String(item.day).padStart(3, "0")} / 365
-        </span>
+    if (!response.ok) {
+      throw new Error("Không thể đọc danh sách ảnh.");
+    }
 
-        <h3>${item.title}</h3>
-      </div>
-    `;
+    const files = await response.json();
 
-    gallery.appendChild(card);
-  });
+    const images = files
+      .filter((file) => /^day-\d{3}\.(png|jpg|jpeg|webp)$/i.test(file.name))
+      .sort((a, b) => {
+        const dayA = Number(a.name.match(/\d{3}/)[0]);
+        const dayB = Number(b.name.match(/\d{3}/)[0]);
+
+        return dayB - dayA;
+      });
+
+    images.forEach((file) => {
+      const card = document.createElement("article");
+      card.className = "green365-card";
+
+      const image = document.createElement("img");
+      image.src = file.download_url;
+      image.alt = "";
+      image.loading = "lazy";
+
+      card.appendChild(image);
+      gallery.appendChild(card);
+    });
+  } catch (error) {
+    console.error(error);
+  }
 }
+
+loadGreen365Images();
