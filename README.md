@@ -1,27 +1,29 @@
-# HKlandscapestudio
+# Hoàng Kim Landscape Studio
 
-Website tĩnh dành cho Hoàng Kim Landscape Studio.
+Website tĩnh chính thức của **Hoàng Kim Landscape Studio**, triển khai bằng GitHub Pages tại:
 
-## Quyền quản trị
-Bạn có toàn quyền quản trị khi:
-1. Tạo tài khoản GitHub của chính bạn.
-2. Tạo repository tên `hklandscapestudio`.
-3. Tải toàn bộ các file trong thư mục này lên repository.
-4. Bật GitHub Pages tại Settings → Pages → Deploy from branch → `main` / root.
+`https://hklandscapestudio.github.io/`
 
-Website sẽ có địa chỉ dạng:
-`https://TEN-GITHUB-CUA-BAN.github.io/hklandscapestudio/`
+## Cấu trúc chính
+- `index.html`: trang chủ
+- `styles.css`: giao diện dùng chung
+- `script.js`: menu responsive và hành vi dùng chung
+- `portfolio.html` + `portfolio.js`: hồ sơ năng lực
+- `green365.html` + `green365.js`: thư viện GREEN365 Journal
+- `case-study-module/case-study/`: các Case Study
+- `assets/`: logo, ảnh dự án, Portfolio và Green365
 
-## Cách chỉnh sửa
-- Nội dung: sửa `index.html`
-- Màu sắc và bố cục: sửa `styles.css`
-- Hình ảnh: thay file trong thư mục `assets`
-- Logo: `assets/logo.jpg`
+## Cập nhật GREEN365
+Thêm ảnh theo quy ước `assets/day-XXX.png`, ví dụ `day-046.png`. Trang Green365 sẽ tự đọc danh sách ảnh từ repository GitHub và sắp xếp ngày mới nhất lên trước. Khi GitHub API tạm thời không phản hồi, website dùng bộ ảnh cục bộ hiện có làm phương án dự phòng.
 
-## Thông tin đang dùng
+## Triển khai GitHub Pages
+Repository dùng cho website người dùng phải là `HKlandscapestudio/hklandscapestudio.github.io`. Bật GitHub Pages tại **Settings → Pages → Deploy from a branch → main / root**.
+
+## Thông tin liên hệ đang dùng
 - Phone: 09845.23451
-- Email: Hoangkimlanescapestudio@gmail.com
+- Email: Hoangkimlandscapestudio@gmail.com
 - Address: TP Quy Nhơn, Gia Lai
+- Website: hklandscapestudio.github.io
 
-## Tên miền riêng
-Sau này có thể mua tên miền như `hklandscapestudio.com` và trỏ về GitHub Pages.
+## Ghi chú
+Sau mỗi lần cập nhật nội dung, nên kiểm tra các liên kết nội bộ, ảnh, sitemap và hiển thị trên điện thoại trước khi đưa bản mới lên nhánh `main`.
